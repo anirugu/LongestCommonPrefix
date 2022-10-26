@@ -13,9 +13,11 @@ string longestCommonPrefix(vector<string>& strs)
 	else {
 		// using smallest string to loop less
 		string small = min(strs[0], strs[1]);
-		for (int i = 1; i < strs.size() - 1; i++)
+		for (int i = 2; i < strs.size() - 1; i++)
 		{
-			exchange(strs[i], strs[i + 1]);
+			small = min(small, strs[i]);
+			for (int j = 0; small.length(); j++) {
+			}
 		}
 	}
 
